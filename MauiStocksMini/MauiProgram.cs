@@ -10,18 +10,20 @@ using DevExpress.Maui.Charts;
 
 namespace DevExpress.Maui.Demo.Stocks
 {
-	public class Startup : IStartup
+	public class MauiProgram
 	{
-		public void Configure(IAppHostBuilder appBuilder)
-		{
-			appBuilder
+		public static MauiApp CreateMauiApp() {
+
+			var builder = MauiApp.CreateBuilder();
+			builder
 				.UseMauiApp<App>()
-				.ConfigureMauiHandlers((_, handlers) => handlers.AddHandler<IDXCollectionView, DXCollectionViewHandler>())
-				.ConfigureMauiHandlers((_, handlers) => handlers.AddHandler<ChartView, ChartViewHandler>())
-				.ConfigureFonts(fonts =>
-				{
+				.ConfigureFonts(fonts => {
 					fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-				});
+				})
+				.ConfigureMauiHandlers(handlers => handlers.AddHandler<ChartView, ChartViewHandler>())
+				.ConfigureMauiHandlers(handlers => handlers.AddHandler<IDXCollectionView, DXCollectionViewHandler>());
+
+			return builder.Build();
 		}
 	}
 }

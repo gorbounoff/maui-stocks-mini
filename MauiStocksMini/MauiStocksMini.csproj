@@ -34,127 +34,33 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <None Remove="Resources\Historical Data\AAPL.json" />
-	  <None Remove="Resources\Historical Data\ABBV.json" />
-	  <None Remove="Resources\Historical Data\ABT.json" />
-	  <None Remove="Resources\Historical Data\ACN.json" />
-	  <None Remove="Resources\Historical Data\ADBE.json" />
-	  <None Remove="Resources\Historical Data\AMZN.json" />
-	  <None Remove="Resources\Historical Data\BA.json" />
-	  <None Remove="Resources\Historical Data\BAC.json" />
-	  <None Remove="Resources\Historical Data\BMY.json" />
-	  <None Remove="Resources\Historical Data\BRK-A.json" />
-	  <None Remove="Resources\Historical Data\C.json" />
-	  <None Remove="Resources\Historical Data\CMCSA.json" />
-	  <None Remove="Resources\Historical Data\COST.json" />
-	  <None Remove="Resources\Historical Data\CRM.json" />
-	  <None Remove="Resources\Historical Data\CSCO.json" />
-	  <None Remove="Resources\Historical Data\CVX.json" />
-	  <None Remove="Resources\Historical Data\DIS.json" />
-	  <None Remove="Resources\Historical Data\FB.json" />
-	  <None Remove="Resources\Historical Data\GOOG.json" />
-	  <None Remove="Resources\Historical Data\HD.json" />
-	  <None Remove="Resources\Historical Data\IBM.json" />
-	  <None Remove="Resources\Historical Data\INTC.json" />
-	  <None Remove="Resources\Historical Data\JNJ.json" />
-	  <None Remove="Resources\Historical Data\JPM.json" />
-	  <None Remove="Resources\Historical Data\KO.json" />
-	  <None Remove="Resources\Historical Data\LLY.json" />
-	  <None Remove="Resources\Historical Data\MA.json" />
-	  <None Remove="Resources\Historical Data\MCD.json" />
-	  <None Remove="Resources\Historical Data\MDT.json" />
-	  <None Remove="Resources\Historical Data\MRK.json" />
-	  <None Remove="Resources\Historical Data\MSFT.json" />
-	  <None Remove="Resources\Historical Data\NEE.json" />
-	  <None Remove="Resources\Historical Data\NFLX.json" />
-	  <None Remove="Resources\Historical Data\NKE.json" />
-	  <None Remove="Resources\Historical Data\NVDA.json" />
-	  <None Remove="Resources\Historical Data\ORCL.json" />
-	  <None Remove="Resources\Historical Data\PEP.json" />
-	  <None Remove="Resources\Historical Data\PFE.json" />
-	  <None Remove="Resources\Historical Data\PG.json" />
-	  <None Remove="Resources\Historical Data\PM.json" />
-	  <None Remove="Resources\Historical Data\PYPL.json" />
-	  <None Remove="Resources\Historical Data\T.json" />
-	  <None Remove="Resources\Historical Data\TMO.json" />
-	  <None Remove="Resources\Historical Data\TSLA.json" />
-	  <None Remove="Resources\Historical Data\UNH.json" />
-	  <None Remove="Resources\Historical Data\V.json" />
-	  <None Remove="Resources\Historical Data\VZ.json" />
-	  <None Remove="Resources\Historical Data\WFC.json" />
-	  <None Remove="Resources\Historical Data\WMT.json" />
-	  <None Remove="Resources\Historical Data\XOM.json" />
 	  <None Remove="Resources\Images\financial_chart.svg" />
 	  <None Remove="Resources\Images\not_changed.svg" />
 	  <None Remove="Resources\Images\quote_arrow_down.svg" />
 	  <None Remove="Resources\Images\quote_arrow_up.svg" />
+	  <None Remove="Resources\symbols.json" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Historical Data\AAPL.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\ABBV.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\ABT.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\ACN.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\ADBE.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\AMZN.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\BA.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\BAC.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\BMY.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\BRK-A.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\C.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\CMCSA.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\COST.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\CRM.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\CSCO.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\CVX.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\DIS.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\FB.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\GOOG.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\HD.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\IBM.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\INTC.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\JNJ.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\JPM.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\KO.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\LLY.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\MA.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\MCD.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\MDT.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\MRK.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\MSFT.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\NEE.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\NFLX.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\NKE.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\NVDA.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\ORCL.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\PEP.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\PFE.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\PG.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\PM.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\PYPL.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\T.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\TMO.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\TSLA.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\UNH.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\V.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\VZ.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\WFC.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\WMT.json" />
-	  <EmbeddedResource Include="Resources\Historical Data\XOM.json" />
-	  <EmbeddedResource Include="Resources\symbols.json" />
+		<EmbeddedResource Include="Data\symbols.json">
+			<LogicalName>symbols</LogicalName>
+		</EmbeddedResource>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <PackageReference Include="DevExpress.Maui.Charts" Version="21.2.1-pre-21231" />
-	  <PackageReference Include="DevExpress.Maui.CollectionView" Version="21.2.1-pre-21231" />
+	  <PackageReference Include="DevExpress.Maui.Charts" Version="21.2.1-pre-21272" />
+	  <PackageReference Include="DevExpress.Maui.CollectionView" Version="21.2.1-pre-21272" />
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\MainPage.xaml.cs">
+	    <DependentUpon>MainPage.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Themes\DarkTheme.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Themes\SharedStyles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

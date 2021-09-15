@@ -1,16 +1,11 @@
 ﻿using Microsoft.Maui.Controls;
-using Microsoft.Maui.Controls.Internals;
 using Microsoft.Maui.Controls.Xaml;
 using Microsoft.Maui.Graphics;
 using System;
-using System.Collections.Generic;
 using System.Globalization;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DevExpress.Maui.Demo.Stocks {
-    public class DoubleToImageSourceConverter : IValueConverter {
+    public class DoubleToImageSourceConverter : IValueConverter, IMarkupExtension<DoubleToImageSourceConverter> {
         public ImageSource ZeroValue { get; set; } = string.Empty;
         public ImageSource PositiveValue { get; set; } = string.Empty;
         public ImageSource NegativeValue { get; set; } = string.Empty;
@@ -25,26 +20,17 @@ namespace DevExpress.Maui.Demo.Stocks {
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
             throw new NotSupportedException();
         }
-    }
-    public class DoubleToImageSourceConverterExtension : IMarkupExtension<DoubleToImageSourceConverter> {
-        public ImageSource PositiveValue { get; set; } = string.Empty;
-        public ImageSource NegativeValue { get; set; } = string.Empty;
-        public ImageSource ZeroValue { get; set; } = string.Empty;
 
-        public DoubleToImageSourceConverter ProvideValue(IServiceProvider serviceProvider) {
-            return new DoubleToImageSourceConverter {
-                PositiveValue = this.PositiveValue,
-                NegativeValue = this.NegativeValue,
-                ZeroValue = this.ZeroValue
-            };
+        public object ProvideValue(IServiceProvider serviceProvider) {
+            return this;
         }
 
-        object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider) {
-            return ProvideValue(serviceProvider);
+        DoubleToImageSourceConverter IMarkupExtension<DoubleToImageSourceConverter>.ProvideValue(IServiceProvider serviceProvider) {
+            return this;
         }
     }
 
-    public class DoubleToColorConverter : IValueConverter {
+    public class DoubleToColorConverter : IValueConverter, IMarkupExtension<DoubleToColorConverter>{
         public string ZeroValue { get; set; } = string.Empty;
         public string PositiveValue { get; set; } = string.Empty;
         public string NegativeValue { get; set; } = string.Empty;
@@ -59,22 +45,13 @@ namespace DevExpress.Maui.Demo.Stocks {
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) {
             throw new NotSupportedException();
         }
-    }
-    public class DoubleToColorConverterExtension : IMarkupExtension<DoubleToColorConverter> {
-        public string PositiveValue { get; set; } = null;
-        public string NegativeValue { get; set; } = null;
-        public string ZeroValue { get; set; } = null;
 
         public DoubleToColorConverter ProvideValue(IServiceProvider serviceProvider) {
-            return new DoubleToColorConverter {
-                PositiveValue = this.PositiveValue,
-                NegativeValue = this.NegativeValue,
-                ZeroValue = this.ZeroValue
-            };
+            return this;
         }
 
         object IMarkupExtension.ProvideValue(IServiceProvider serviceProvider) {
-            return ProvideValue(serviceProvider);
+            return this;
         }
     }
 }
