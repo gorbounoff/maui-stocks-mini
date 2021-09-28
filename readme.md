@@ -1,3 +1,6 @@
+<!-- default badges list -->
+[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
+<!-- default badges end -->
 # Stocks App for .NET MAUI
 
 This repository contains a sample application that displays companies listed on NASDAQ and historical quotes on stocks over the past three months. The app consists of two screens. On the main screen, the application uses the [DevExpress Collection View for .NET MAUI](https://docs.devexpress.com/MAUI/403324/collection-view/index) to display a list of symbols.
