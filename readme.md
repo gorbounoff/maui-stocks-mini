@@ -39,7 +39,7 @@ The following step-by-step tutorial details how to reproduce this application.
     * **DevExpress.Maui.CollectionView**&mdash;contains the DevExpress .NET MAUI [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) component.
     * **DevExpress.Maui.Charts**&mdash;contains the DevExpress .NET MAUI [ChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) component.
 
-> Collection View and Charts for .NET MAUI support both iOS and Android. Your project cannot target MacCatalyst and/or Windows. To remove them, right-click the project, go to the project properties, and remove `net6.0-maccatalyst` from the list of target frameworks. In addition, please remove MacCatalyst and Windows folders from the Platforms folder in Solution Explorer.
+> Collection View and Charts for .NET MAUI support both iOS and Android. Your project cannot target MacCatalyst and/or Windows. To remove them, right-click the project, go to the project properties, and remove `net6.0-maccatalyst` from the list of target frameworks. In addition, please remove **MacCatalyst** and **Windows** folders from the **Platforms** folder in **Solution Explorer**.
 
 ### The Main Page
 
