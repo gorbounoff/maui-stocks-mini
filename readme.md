@@ -4,51 +4,49 @@
 <!-- default badges end -->
 # Stocks App for .NET MAUI
 
-This repository contains a sample application that displays companies listed on NASDAQ and historical quotes on stocks over the past three months. The app consists of two screens. On the main screen, the application uses the [DevExpress Collection View for .NET MAUI](https://docs.devexpress.com/MAUI/403324/collection-view/index) to display a list of symbols.
+This repository contains a sample application designed to display historical stock information (past three months) for companies listed on NASDAQ. The app includes two screens. The main app screen uses the [DevExpress Collection View for .NET MAUI](https://docs.devexpress.com/MAUI/403324/collection-view/index) to display a list of stock symbols.
 
 <img src="./Images/stocks-main-iphone12.png" alt="iPhone 12" height="700"> <img src="./Images/stocks-main-pixel5.png" alt="Pixel 5" height="700">
 
-On the second screen, the [DevExpress Chart View for .NET MAUI](https://docs.devexpress.com/MAUI/403300/charts/charts) displays historical data &mdash; daily open-close-high-low stock prices and volumes.
+The second screen uses the [DevExpress Chart View for .NET MAUI](https://docs.devexpress.com/MAUI/403300/charts/charts) to display historical data (daily open-close-high-low stock prices and transaction volume).
 
 <img src="./Images/stocks-data-iphone12.png" alt="iPhone 12" height="700"> <img src="./Images/stocks-data-pixel5.png" alt="Pixel 5" height="700">
 
-These and other DevExpress components for mobile development are available free of charge. See the following topic for more information: [Free DevExpress Controls for .NET Multi-platform App UI (.NET MAUI)](https://docs.devexpress.com/MAUI/403245/maui).
+The UI components used in this sample application (alongside other DevExpress .NET MAUI components) are available free of charge. To learn more about our free offer and reserve your free copy, please visit the following webpage: [Free DevExpress Controls for .NET Multi-platform App UI (.NET MAUI)](https://docs.devexpress.com/MAUI/403245/maui).
 
 ## Prerequisites
 
-1. Install Visual Studio 2022 and the latest .NET MAUI version. See the following topic on docs.microsoft.com for more information: [Installation](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation).
-1. Register the following NuGet feed in Visual Studio:
+1. Install Visual Studio 2022 and the latest version of .NET MAUI. Review the following Microsoft help topic for more information: : [Installation](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/installation).
+1. Register the following NuGet feed within Visual Studio::
     ```
     https://nuget.devexpress.com/free/api
-    ```
-    > If you are an active [DevExpress Universal](https://www.devexpress.com/subscriptions/universal.xml) customer, DevExpress Controls for .NET MAUI are available in your [personal NuGet feed](https://nuget.devexpress.com/).
-    
-    See the following topic on docs.microsoft.com for more information on how to register a NuGet source: [Install and manage packages in Visual Studio](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources).
+    ```    
+    If you are unfamiliar with NuGet packages, please review the following Microsoft help topic (to register a NuGet source): [Install and manage packages in Visual Studio](https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio#package-sources).
 
 
-## How to Create This Application
+## How to Reproduce This Application
 
-The step-by-step instructions below describe how to create an application similar to the application in this repository.
+The following step-by-step tutorial details how to reproduce this application.
 
 ### Create a New Project
 
-1. In Visual Studio 2022, create a new .NET MAUI project. Name it *Stocks*. See the following topic on docs.microsoft.com for more information on how to create a new .NET MAUI project: [Build your first app](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/first-app).
+1. Create a new .NET MAUI project in Visual Studio 2022. Name it *Stocks*. If you are new to .NET MAUI, the following Microsoft help topic will be of value: [Build your first app](https://docs.microsoft.com/en-gb/dotnet/maui/get-started/first-app).
     > You can also call the following command in a CLI to create a new .NET MAUI project:
     > ```
     > dotnet new maui -n Stocks 
     > ```
 1. Install the following packages from the **https://nuget.devexpress.com/free/api** NuGet package source:
-    * **DevExpress.Maui.CollectionView**&mdash;contains the [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) component.
-    * **DevExpress.Maui.Charts**&mdash;contains the [ChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) component.
+    * **DevExpress.Maui.CollectionView**&mdash;contains the DevExpress .NET MAUI [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) component.
+    * **DevExpress.Maui.Charts**&mdash;contains the DevExpress .NET MAUI [ChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) component.
 
-> DevExpress Collection View and Charts for .NET MAUI support iOS and Android. The project should only contain these platforms. If the wizard included MacCatalyst and/or Windows platforms in the project, remove them. Right-click the project, go to the project properties, and remove `net6.0-maccatalyst` from the list of target frameworks. Also, remove the **MacCatalyst** and **Windows** folders from the **Platforms** folder in the Solution Explorer.
+> Collection View and Charts for .NET MAUI support both iOS and Android. Your project cannot target MacCatalyst and/or Windows. To remove them, right-click the project, go to the project properties, and remove `net6.0-maccatalyst` from the list of target frameworks. In addition, please remove MacCatalyst and Windows folders from the Platforms folder in Solution Explorer.
 
 ### The Main Page
 
-The main page displays a list of companies. In the *MainPage.xaml* file, do the following:
+Our main page displays a list of companies. In the *MainPage.xaml* file, you must: 
 
 1. Define the **dxcv** XAML namespace that refers to the **DevExpress.Maui.CollectionView** CLR namespace.
-1. Remove the default content and add an instance of the [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) class to the page. Remove the default content's event handlers in the code-behind. We recommend that you remove the default styles (fonts, colors, and other settings) in the *App.xaml* file.
+1. Remove default content and add an instance of the [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) class to the page. Remove default content event handlers in the code-behind. We recommend that you remove default styles (fonts, colors, and other settings) in the *App.xaml* file.
 
 ```xaml
 <ContentPage
@@ -64,9 +62,9 @@ The main page displays a list of companies. In the *MainPage.xaml* file, do the 
 
 #### Register Handlers for the Chart and Collection Views
 
-The .NET MAUI framework requires a registered handler for any third-party control you use in the application. See the following topic on docs.microsoft.com for more information: [Register handlers](https://docs.microsoft.com/en-us/dotnet/maui/fundamentals/app-startup#register-handlers).
+The .NET MAUI Framework requires a registered handler for all third-party controls used in an application. Review the following Microsoft help topic for more information: [Register handlers](https://docs.microsoft.com/en-us/dotnet/maui/fundamentals/app-startup#register-handlers).
 
-In the *MauiProgram.cs* file, register a handler for the [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) type as shown below. As we use a chart on the second page, we also register a handler for the [ChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) type.
+In the *MauiProgram.cs* file, register a handler for the [DXCollectionView](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView) type as shown below. Since we use a chart on the second page, we also register a handler for the [ChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) type.
 
 ```cs
 using DevExpress.Maui.CollectionView;
@@ -97,10 +95,10 @@ namespace Stocks {
 
 ### Data Source
 
-If we now run the application, it displays an empty collection view on the main page. Let's populate it with data. This application follows the [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) pattern. To store data, the application uses the following classes:
+If we run the application as it stands, it will display an empty collection view on the main page. The next step is to populate the app with data. This sample application follows the [MVVM](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel) pattern. To store data, the application uses the following classes:
 
-* **Symbol**&mdash;contains a company name, ticker, and a collection of daily historical data.
-* **StockPrice**&mdash;contains the open-close-high-low prices and volume in a single day.
+* **Symbol**&mdash;contains company name, ticker, and a collection of daily historical data.
+* **StockPrice**&mdash;contains open-close-high-low prices and transaction volume for a single day.
 
 Create a new class in the project and paste the following code:
 
@@ -127,9 +125,9 @@ namespace Stocks {
 
 #### Populate the Data Source
 
-A mobile application typically uses a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) API to obtain data from a web service. The response can be formatted in HTML, XML, JSON, or any other format. This sample application uses static data formatted in [JSON](https://en.wikipedia.org/wiki/JSON) and stored in a file. The JSON file contains an array of companies each of which contains an array of daily historical stock prices.
+Most mobile applications use a [REST](https://en.wikipedia.org/wiki/Representational_state_transfer) API to obtain data from a web service. The response can be formatted in HTML, XML, JSON, or any other format. This sample application uses static data formatted in [JSON](https://en.wikipedia.org/wiki/JSON) and stored in a file. The JSON file contains an array of companies, with an array of daily historical stock prices for each.
 
-Download the [symbols.json](./MauiStocksMini/Data/symbols.json) file, and add this file to the solution. Then right-click the file, go to properties, and set **Build Action** to **Embedded resource**.
+Download the [symbols.json](./MauiStocksMini/Data/symbols.json) file, and add this file to the solution. Once added, right-click the file, go to properties, and set **Build Action** to **Embedded resource**.
 
 <img src="./Images/embedded-resource.png" alt="Embedded resource" width="700">
 
@@ -168,13 +166,13 @@ namespace Stocks {
 }
 ```
 
-> You should install the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) package to deserialize data. See the following topic on docs.microsoft.com for more information: [Install and use a package in Visual Studio](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio).
+> You should install the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) package to deserialize data. Review the following Microsoft help topic for more information: [Install and use a package in Visual Studio](https://docs.microsoft.com/en-us/nuget/quickstart/install-and-use-a-package-in-visual-studio).
 
 #### The Main View Model
 
-Now let's create a view model for the main page. As the data source contains an array of daily stock prices, we can display the price change next to each company in the list. The code below defines the following view models:
+To proceed, we will need to create a view model for the main page. As the data source contains an array of daily stock prices, we can display the price change next to each company in the list. The code below defines the following view models:
 
-* **ItemViewModel**&mdash;a view model for an item in the view. It contains the company name, close stock price, price change, and change percentage.
+* **ItemViewModel**&mdash;a view model for an item in the view. It contains company name, close stock price, price change, and change percentage.
 * **MainViewModel**&mdash;a view model for the main page. It contains a collection of item view models. When the main view model is created, it populates the item collection with data.
 
 ```cs
@@ -213,7 +211,7 @@ namespace Stocks {
 
 #### Update the Main Page Markup
 
-Now we can update the main page markup so it displays data from the view model. We set the **ContentPage.BindingContext** property to a view model object and bind the [DXCollectionView.ItemsSource](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemsSource) property to a collection in this view model.
+We can now update main page markup so it displays data from the view model. We set the **ContentPage.BindingContext** property to a view model object and bind the [DXCollectionView.ItemsSource](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemsSource) property to a collection in this view model.
 
 ```xaml
 <ContentPage.BindingContext>
@@ -228,7 +226,7 @@ Now we can update the main page markup so it displays data from the view model. 
 
 ##### Item Template
 
-The [DXCollectionView.ItemTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemTemplate) property allows you to specify a data template used to render items in the view. In this example, the template contains multiple labels and an image. See the following topic on docs.microsoft.com for more information on data templates: [Creating a Data Template](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/creating).
+The [DXCollectionView.ItemTemplate](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.ItemTemplate) property allows you to specify a data template used to render items in the view. In this example, the template contains multiple labels and an image. Review the following Microsoft help topic for more information on data templates: [Creating a Data Template](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/templates/data-templates/creating).
 
 Let's create a grid layout in the item template.
 
@@ -261,7 +259,7 @@ Let's create a grid layout in the item template.
 </dxcv:DXCollectionView.ItemTemplate>
 ```
 
-Then we populate the grid layout with labels and images.
+We also need to populate the grid layout with labels and images.
 
 ```xaml
 <Label
@@ -334,7 +332,7 @@ Then we populate the grid layout with labels and images.
 
 ##### Value Converters
 
-As you may notice, the markup uses a converter to display an up or down arrow depending on whether the price is increased or decreased. You can find image files in the [Images](./MauiStocksMini/Resources/Images) folder. The text color also depends on the change. To learn more about converters, see the following topic on docs.microsoft.com: [Binding Value Converters](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/data-binding/converters).
+As you may notice, the markup uses a converter to display an up or down arrow (depending on price increase/decrease). You can find the appropriate image files in the [Images](./MauiStocksMini/Resources/Images) folder. The text color also depends on price change. To learn more about converters, review the following Microsoft help topic: [Binding Value Converters](https://docs.microsoft.com/en-us/xamarin/xamarin-forms/app-fundamentals/data-binding/converters).
 
 ```cs
 using Microsoft.Maui.Controls;
@@ -398,17 +396,17 @@ namespace DevExpress.Maui.Demo.Stocks {
 
 ##### Theme
 
-The application applies a dark theme to controls. You can find colors and styles in the [DarkTheme.xaml](./MauiStocksMini/Themes/DarkTheme.xaml) and [SharedStyles.xaml](./MauiStocksMini/Themes/SharedStyles.xaml) files of this repository.
+The application applies a dark theme to controls. You can find colors and styles in the [DarkTheme.xaml](./MauiStocksMini/Themes/DarkTheme.xaml) and [SharedStyles.xaml](./MauiStocksMini/Themes/SharedStyles.xaml) files within this repository.
 
 #### Run the Application
 
-You can now run the application. The main page displays a list of companies.
+You can now execute the application. Your main page should now display a list of companies.
 
 <img src="./Images/stocks-main-iphone12.png" alt="iPhone 12" height="700"> <img src="./Images/stocks-main-pixel5.png" alt="Pixel 5" height="700">
 
 ### The Historical Data Page
 
-The second page displays historical data in a chart. Create a new page in Visual Studio and name it *HistoricalDataPage*. Do the following in the markup:
+The second page displays historical data (using our [.NET MAUI Chart](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) component). Create a new page in Visual Studio and name it *HistoricalDataPage*. Do the following in the markup:
 1. Define the **dxc** XAML namespace that refers to the **DevExpress.Maui.Charts** CLR namespace.
 1. Add an instance of the [ChartView](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView) class to the page.
 
@@ -425,10 +423,10 @@ The second page displays historical data in a chart. Create a new page in Visual
 
 #### Populate the Chart with Data
 
-Let's create a view model for this page and populate it with data. The code below defines the **HistoricalDataViewModel** class that exposes the following properties:
+We’ll need to create a view model for this page and populate it with data. The code below defines the **HistoricalDataViewModel** class and exposes the following properties:
 
 * **StockPrices**&mdash;daily open-close-high-low stock prices.
-* **RangeStart** and **RangeEnd**&mdash;specify the visible date range in the chart. The chart displays data for the last 60 days. A user can scroll the chart to see the rest of the available historical prices.
+* **RangeStart** and **RangeEnd**&mdash;specify the visible date range in the chart. The chart displays data for the last 60 days. Users can scroll the chart to explore all historical price data.
 
 ```cs
 using System;
@@ -458,7 +456,7 @@ namespace Stocks {
 
 #### Update the Historical Data Page Markup
 
-Now we can update the historical data page so it displays data from the view model. We set the **ContentPage.BindingContext** property to a view model object in the page constructor.
+We can now update the historical data page so it displays data from the view model. We set the **ContentPage.BindingContext** property to a view model object in the page constructor.
 
 ```cs
 using Microsoft.Maui.Controls;
@@ -474,7 +472,7 @@ namespace Stocks {
 }
 ```
 
-At the top of the page, the app displays the company name and the last price. Below the company name, the app displays the chart. We place these elements in a grid layout. 
+At the top of the page, the app displays company name and the last price. Below company name, the app displays a chart. We place these elements within a grid layout.
 
 ```xaml
 <Grid>
@@ -485,7 +483,7 @@ At the top of the page, the app displays the company name and the last price. Be
 </Grid>
 ```
 
-The first grid row contains the company name and the last price. We use labels and images to display this information.
+The first grid row contains company name and the last price. We use labels and images to display this information.
 
 ```xaml
 <StackLayout
@@ -567,7 +565,7 @@ The first grid row contains the company name and the last price. We use labels a
 </StackLayout>
 ```
 
-In the second grid row, we place the chart.
+We place the chart in the second row.
 
 ```xaml
 <dxc:ChartView
@@ -588,12 +586,12 @@ In the second grid row, we place the chart.
 
 ##### Axes
 
-The [ChartView.AxisX](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView.AxisX) and [ChartView.AxisY](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView.AxisY) properties allow you to specify the chart axes:
+The [ChartView.AxisX](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView.AxisX) and [ChartView.AxisY](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ChartView.AxisY) properties allow you to configure chart axes:
 
-* [DateTimeAxisX.MeasureUnit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.DateTimeAxisX.MeasureUnit)&mdash;specifies the detail level for date-time values.
-* [DateTimeAxisX.Range](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.DateTimeAxisX.Range)&mdash;specifies the date range. We bind these settings to properties in the view model.
+* [DateTimeAxisX.MeasureUnit](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.DateTimeAxisX.MeasureUnit)&mdash;specifies detail level for date-time values.
+* [DateTimeAxisX.Range](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.DateTimeAxisX.Range)&mdash;specifies date range. We bind these settings to properties in the view model.
 * [NumericAxisY.AutoRangeMode](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.NumericAxisY.AutoRangeMode)&mdash;specifies whether the value range is calculated based on all or visible values.
-* [NumericAxisY.Label](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Label)&mdash;specifies the label position and string format.
+* [NumericAxisY.Label](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Label)&mdash;specifies label position and string format.
 * [NumericAxisY.Style](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Style)&mdash;specifies grid line visibility and colors.
 
 ```xaml
@@ -635,7 +633,7 @@ The [ChartView.AxisX](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.Ch
 
 ##### Japanese Candlestick Chart
 
-The [CandleStickSeries](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.CandleStickSeries) is a series that contains open-close-high-low stock prices. The [CandleStickSeries.Data](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.XYSeries.Data) property is set to a [SeriesDataAdapter](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.SeriesDataAdapter) object that specifies how to interpret the bound data source fields. To specify data source fields that contain data, we use [](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ValueDataMember) objects. See the following topic for more information: [Data Adapters](https://docs.devexpress.com/MAUI/403336/charts/data-adapters).
+The [CandleStickSeries](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.CandleStickSeries) contains open-close-high-low stock prices. The [CandleStickSeries.Data](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.XYSeries.Data) property is set to a [SeriesDataAdapter](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.SeriesDataAdapter) object. This object interprets bound data source fields. To specify data source fields with data, we use [](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.ValueDataMember) objects. Review the following topic for more information: [Data Adapters](https://docs.devexpress.com/MAUI/403336/charts/data-adapters).
 
 ```xaml
 <dxc:ChartView.Series>
@@ -655,7 +653,7 @@ The [CandleStickSeries](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.
 </dxc:ChartView.Series>
 ```
 
-We assign a [CandleStickSeriesStyle](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.CandleStickSeriesStyle) object to the [CandleStickSeries.Style](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.CandleStickSeries.Style) property to specify the candlestick chart's appearance settings.
+We assign a [CandleStickSeriesStyle](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.CandleStickSeriesStyle) object to the [CandleStickSeries.Style](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.CandleStickSeries.Style) property to specify candlestick-related appearance settings.
 
 ```xaml
 <dxc:CandleStickSeries.Style>
@@ -669,8 +667,7 @@ We assign a [CandleStickSeriesStyle](https://docs.devexpress.com/MAUI/DevExpress
 
 ##### Bar Chart
 
-The [BarSeries](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.BarSeries) is a series that display data as bars. We use it do display stock volumes by day.
-
+The [BarSeries](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.BarSeries) display data as bars. We use Bar charts to display daily stock volumes.
 ```xaml
 <dxc:BarSeries>
     <dxc:BarSeries.Data>
@@ -691,9 +688,9 @@ The [BarSeries](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.BarSerie
 We can use the [BarSeries.AxisY](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.Series.AxisY) property to specify the Y-axis. A [NumericAxisY](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.NumericAxisY) object allows you to specify the following settings:
 
 * [LabelValueNotation](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.NumericAxisY.LabelValueNotation)&mdash;this property is set to an [AxisLabelEngineeringNotation](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisLabelEngineeringNotation) object. The chart also supports [AxisLabelScientificNotation](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisLabelScientificNotation).
-* [Layout](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Layout)&mdash;this property is set to an [AxisLayout](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisLayout) object that specifies the axis size and position on the chart.
-* [DisplayPosition](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.DisplayPosition)&mdash;this property allows you to position the axis at the near or far edge, or specify a relative or absolute position.
-* [Style](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Style)&mdash;this property is set to an [AxisStyle](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisStyle) object that specifies the axis and grid line visibility and colors.
+* [Layout](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Layout)&mdash;this property is set to an [AxisLayout](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisLayout) object that specifies axis size and position on the chart.
+* [DisplayPosition](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.DisplayPosition)&mdash;this property allows you to position the axis at the near or far edge, or specify relative or absolute position.
+* [Style](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisBase.Style)&mdash;this property is set to an [AxisStyle](https://docs.devexpress.com/MAUI/DevExpress.Maui.Charts.AxisStyle) object that specifies axis and grid line visibility and colors.
 
 
 ```xaml
@@ -732,7 +729,7 @@ We can use the [BarSeries.AxisY](https://docs.devexpress.com/MAUI/DevExpress.Mau
 
 ### Navigation Between Two Pages
 
-When a user taps a company in the list on the main page, the application shows historical data for that company on the second page. Let's wrap the main page in a **NavigationPage** to support navigation from the main page to the second page and back. Update the *App.xaml.cs* file as follows:
+When a user taps a company in the list on the main page, the application displays historical data for that company on the second page. Let's wrap the main page in a **NavigationPage** to support navigation from the main page to the second page (and back). Update the *App.xaml.cs* file as follows:
 
 ```cs
 using Microsoft.Maui.Controls;
@@ -748,7 +745,7 @@ namespace DevExpress.Maui.Demo.Stocks {
 }
 ```
 
-In the *MainPage.xaml* file and the code-behind, handle to the [DXCollectionView.Tap](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.Tap) event as follows:
+In the *MainPage.xaml* file and the code-behind, handle the [DXCollectionView.Tap](https://docs.devexpress.com/MAUI/DevExpress.Maui.CollectionView.DXCollectionView.Tap) event as follows:
 
 ```cs
 private async void DXCollectionView_Tap(object sender, CollectionView.CollectionViewGestureEventArgs e) {
@@ -761,7 +758,7 @@ private async void DXCollectionView_Tap(object sender, CollectionView.Collection
 
 #### Run the Application
 
-Now run the application. A user can tap a company on the main page and observe the company's historical data on the opened page.
+Let’s execute the application once more. Users can now tap a company name on the main page and analyze the company's historical data on the second page.
 
 <img src="./Images/stocks-main-iphone12.png" alt="iPhone 12" height="700"> <img src="./Images/stocks-main-pixel5.png" alt="Pixel 5" height="700">
 
