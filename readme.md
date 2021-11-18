@@ -1,7 +1,3 @@
-<!-- default badges list -->
-[![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T1032611)
-[![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
-<!-- default badges end -->
 # Stocks App for .NET MAUI
 
 This repository contains a sample application designed to display historical stock information (past three months) for companies listed on NASDAQ. The app includes two screens. The main app screen uses the [DevExpress Collection View for .NET MAUI](https://docs.devexpress.com/MAUI/403324/collection-view/index) to display a list of stock symbols.
